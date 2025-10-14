@@ -9,8 +9,11 @@
 #define BSP__H_
 
 #include <stdint.h>
+#include <mod/fram/FM24CL04B.h>
 
 void initializeBoard(void);
+
+extern FM24CL04B fram;
 
 #endif
 

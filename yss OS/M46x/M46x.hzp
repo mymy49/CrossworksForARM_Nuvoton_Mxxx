@@ -10,7 +10,7 @@
   <configuration
     Name="Release"
     c_preprocessor_definitions="NDEBUG"
-    gcc_debugging_level="None"
+    gcc_debugging_level="Level 3"
     gcc_omit_frame_pointer="Yes"
     gcc_optimization_level="Level 1"
     hidden="Yes" />
@@ -46,7 +46,7 @@
       arm_target_interface_type="SWD"
       arm_target_loader_applicable_loaders="Flash"
       arm_target_loader_default_loader="Flash"
-      c_user_include_directories="$(ProjectDir)/app/inc;$(TargetsDir)/M4xx/yss OS/yss/inc"
+      c_user_include_directories="$(ProjectDir)/app/inc;../../targets/M4xx/yss OS/yss/inc"
       debug_register_definition_file="$(DeviceRegisterDefinitionFile)"
       gcc_cplusplus_language_standard="gnu++11"
       gcc_entry_point="Reset_Handler"

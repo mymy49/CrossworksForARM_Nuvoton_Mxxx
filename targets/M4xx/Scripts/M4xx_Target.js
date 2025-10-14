@@ -40,11 +40,11 @@ function GetPartName()
 
 function MatchPartName(name)
 {
-  var partName = GetPartName();
+	var partName = GetPartName();
 
-  if (partName == "")
-    return false;
+	if (partName == "")
+		return false;
 
-  return name.indexOf(partName) == 0;
+	return name.indexOf(partName) == 0;
 }
 

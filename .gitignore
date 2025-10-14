@@ -2,3 +2,5 @@
 *.hzs
 *.o
 *.d
+/yss OS/M46x/M46x THUMB Debug
+/yss OS/M46x/M46x THUMB Release

@@ -1,0 +1,4 @@
+[submodule "targets/M4xx/yss OS/yss"]
+	path = targets/M4xx/yss OS/yss
+	url = ../yss
+

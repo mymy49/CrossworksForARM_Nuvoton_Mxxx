@@ -1,0 +1,447 @@
+<projects>
+	<project cpu_manufacturer="Nuvoton" cpu_name="M43x" cpu_generic_name="M43x" board_manufacturer="" board_name="" name="M43x C/C++ Executable" description="A C/C++ executable for Nuvoton M43x with stdDriver." type="Executable" template_name="Nuvoton M43x_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="256" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+		<property name="arm_linker_heap_size" value="256" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(DeviceIncludePath);$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M43x/Include;" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M4xx/XML/property_groups.xml" />
+		<propertygroup name="Target" value="M433SE8AE" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="CMSIS Files">
+			<file name="$(DeviceHeaderFile)" expand="no" />
+			<file name="$(DeviceSystemFile)" expand="no">
+				<property name="default_code_section" value=".init" />
+				<property name="default_const_section" value=".init_rodata" />
+			</file>
+		</folder>
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder> 
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<file name="Source/main.c" source="$(TargetsDir)/M4xx/Source/main.c" />
+		</folder>
+		<folder name="StdDriver Files">
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/acmp.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/bpwm.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/can.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/ccap.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/clk.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/crc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/crypto.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/dac.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/eadc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/ebi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/ecap.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/emac.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/epwm.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/fmc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/gpio.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/hsusbd.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/i2c.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/i2s.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/pdma.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/qei.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/qspi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/rtc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/sc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/scuart.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/sdh.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/spi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/spim.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/sys.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/timer.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/timer_pwm.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/trng.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/uart.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/usbd.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/usci_i2c.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/usci_spi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/usci_uart.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/wdt.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/src/wwdt.c" />
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M43x" cpu_generic_name="M43x" board_manufacturer="" board_name="" name="M43x C/C++ Executable" description="A C/C++ executable for Nuvoton M43x in baremetal." type="Executable" template_name="Nuvoton M43x_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="256" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+		<property name="arm_linker_heap_size" value="256" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(DeviceIncludePath);$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M43x/Include;" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M4xx/XML/property_groups.xml" />
+		<propertygroup name="Target" value="M433SE8AE" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="CMSIS Files">
+			<file name="$(DeviceHeaderFile)" expand="no" />
+		</folder>
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<file name="Source/main.cpp" source="$(TargetsDir)/M4xx/Source/main.c" />
+			<file name="Source/system.cpp" source="$(TargetsDir)/M4xx/Source/system.c" expand="no">
+				<property name="default_code_section" value=".init" />
+				<property name="default_const_section" value=".init_rodata" />
+			</file>
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M43x" cpu_generic_name="M43x" board_manufacturer="" board_name="" name="M43x C/C++ Executable" description="A C/C++ executable for Nuvoton M43x with yss OS." type="Executable" template_name="Nuvoton M43x_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="2048" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="2048" choose="Yes" />
+		<property name="arm_linker_heap_size" value="32768" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(ProjectDir)/app/inc;$(TargetsDir)/M4xx/yss OS/yss/inc" />
+		<property name="c_user_include_directories" value="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M43x/Include;$(ProjectDir)/app/inc;$(TargetsDir)/M4xx/yss OS/yss/inc" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M4xx/XML/property_groups.xml" />
+		<property name="gcc_cplusplus_language_standard" value="gnu++11" />
+		<propertygroup name="Target" value="M433SE8AE" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="APP Source Files">
+			<folder name="src">
+				<file name="$(ProjectDir)/app/src/main.cpp" source="$(TargetsDir)/M4xx/yss OS/app/src/main.cpp" />
+				<file name="$(ProjectDir)/app/src/bsp.cpp" source="$(TargetsDir)/M4xx/yss OS/app/src/bsp.cpp" />
+			</folder>
+			<folder name="inc">
+				<file name="$(ProjectDir)/app/inc/bsp.h" source="$(TargetsDir)/M4xx/yss OS/app/inc/bsp.h" />
+				<file name="$(ProjectDir)/app/inc/config.h" source="$(TargetsDir)/M4xx/yss OS/app/inc/M43x/config.h" />
+			</folder>
+		</folder>
+		<folder name="yss OS Source Files" path="$(TargetsDir)/M4xx/yss OS/yss" filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE" recurse="yes">
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M46x" cpu_generic_name="M46x" board_manufacturer="" board_name="" name="M46x C/C++ Executable" description="A C/C++ executable for Nuvoton M46x with stdDriver." type="Executable" template_name="Nuvoton M46x_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="256" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+		<property name="arm_linker_heap_size" value="256" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(DeviceIncludePath);$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M46x/Include;" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M4xx/XML/property_groups.xml" />
+		<propertygroup name="Target" value="M467KJHAN" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="CMSIS Files">
+			<file name="$(DeviceHeaderFile)" expand="no" />
+			<file name="$(DeviceSystemFile)" expand="no">
+				<property name="default_code_section" value=".init" />
+				<property name="default_const_section" value=".init_rodata" />
+			</file>
+		</folder>
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder> 
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<file name="Source/main.c" source="$(TargetsDir)/M4xx/Source/main.c" />
+		</folder>
+		<folder name="StdDriver Files">
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/acmp.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/bmc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/bpwm.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/canfd.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/ccap.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/clk.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/crc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/crypto.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/dac.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/eadc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/ebi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/ecap.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/epwm.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/eqei.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/fmc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/gpio.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/hbi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/hsusbd.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/i2c.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/i2s.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/keystore.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/kpi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/pdma.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/qspi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/retarget.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/rng.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/rtc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/sc.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/scuart.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/sdh.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/spi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/spim.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/sys.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/timer.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/timer_pwm.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/trng.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/uart.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/usbd.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/usci_i2c.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/usci_spi.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/usci_uart.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/wdt.c" />
+			<file name="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/src/wwdt.c" />
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M46x" cpu_generic_name="M46x" board_manufacturer="" board_name="" name="M46x C/C++ Executable" description="A C/C++ executable for Nuvoton M46x in baremetal." type="Executable" template_name="Nuvoton M46x_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="256" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+		<property name="arm_linker_heap_size" value="256" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(DeviceIncludePath);$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M46x/Include;" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M4xx/XML/property_groups.xml" />
+		<propertygroup name="Target" value="M467KJHAN" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="CMSIS Files">
+			<file name="$(DeviceHeaderFile)" expand="no" />
+		</folder>
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<file name="Source/main.cpp" source="$(TargetsDir)/M4xx/Source/main.c" />
+			<file name="Source/system.cpp" source="$(TargetsDir)/M4xx/Source/system.c" expand="no">
+				<property name="default_code_section" value=".init" />
+				<property name="default_const_section" value=".init_rodata" />
+			</file>
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M46x" cpu_generic_name="M46x" board_manufacturer="" board_name="" name="M46x C/C++ Executable" description="A C/C++ executable for Nuvoton M46x with yss OS." type="Executable" template_name="Nuvoton M46x_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="2048" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="2048" choose="Yes" />
+		<property name="arm_linker_heap_size" value="262144" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M46x/Include;$(ProjectDir)/app/inc;$(TargetsDir)/M4xx/yss OS/yss/inc" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M4xx/XML/property_groups.xml" />
+		<property name="gcc_cplusplus_language_standard" value="gnu++11" />
+		<propertygroup name="Target" value="M467KJHAN" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="APP Source Files">
+			<folder name="src">
+				<file name="$(ProjectDir)/app/src/main.cpp" source="$(TargetsDir)/M4xx/yss OS/app/src/main.cpp" />
+				<file name="$(ProjectDir)/app/src/bsp.cpp" source="$(TargetsDir)/M4xx/yss OS/app/src/bsp.cpp" />
+			</folder>
+			<folder name="inc">
+				<file name="$(ProjectDir)/app/inc/bsp.h" source="$(TargetsDir)/M4xx/yss OS/app/inc/bsp.h" />
+				<file name="$(ProjectDir)/app/inc/config.h" source="$(TargetsDir)/M4xx/yss OS/app/inc/M43x/config.h" />
+			</folder>
+		</folder>
+		<folder name="yss OS Source Files" path="$(TargetsDir)/M4xx/yss OS/yss" filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE" recurse="yes">
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+</projects>

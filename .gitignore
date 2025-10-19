@@ -1,0 +1,10 @@
+*.hzq
+*.hzs
+*.o
+*.d
+/yss OS/M46x/M46x THUMB Debug
+/yss OS/M46x/M46x THUMB Release
+/yss OS/M43x/M43x THUMB Debug
+/yss OS/M43x/M43x THUMB Release
+/yss OS/M25x/M25x THUMB Debug
+/yss OS/M25x/M25x THUMB Release

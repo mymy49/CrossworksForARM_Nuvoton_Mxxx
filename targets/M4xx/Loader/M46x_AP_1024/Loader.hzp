@@ -1,0 +1,75 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Loader" version="2" target="8">
+  <configuration Name="Common" gcc_debugging_level="Level 3" />
+  <configuration
+    Name="M46x_AP_1024 Debug"
+    inherited_configurations="M46x_AP_1024;Debug" />
+  <configuration
+    Name="M46x_AP_1024 Release"
+    inherited_configurations="M46x_AP_1024;Release" />
+  <project Name="M46x Loader">
+    <configuration
+      CMSIS_CORE="Yes"
+      Name="Common"
+      arm_library_optimization="Small"
+      arm_linker_treat_warnings_as_errors="No"
+      arm_target_debug_interface_type="ADIv5"
+      batch_build_configurations="M46x_AP_1024 Release"
+      c_preprocessor_definitions="NO_SYSTEM_INIT;NO_VTOR_CONFIG"
+      c_user_include_directories="$(PackagesDir)/libraries/libmem_drivers"
+      debug_register_definition_file="$(DeviceRegisterDefinitionFile)"
+      gcc_entry_point="Reset_Handler"
+      linker_additional_files="$(StudioDir)/lib/libmem$(LibExt)$(LIB);$(StudioDir)/lib/libmem_loader$(LibExt)$(LIB)"
+      linker_memory_map_file="$(DeviceMemoryMapFile)"
+      linker_section_placement_file="$(ProjectDir)/ram_placement.xml"
+      package_dependencies="CMSIS;libmem_drivers"
+      project_type="Executable"
+      property_groups_file_path="$(PackagesDir)/libraries/CMSIS_5/propertyGroups.xml"
+      target_reset_script="Reset();" />
+    <configuration
+      Name="Debug"
+      c_preprocessor_definitions="DEBUG"
+      gcc_debugging_level="Level 3"
+      gcc_optimization_level="None"
+      hidden="Yes" />
+    <configuration
+      Name="M46x_AP_1024"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_linker_heap_size="32768"
+      arm_linker_stack_size="4096"
+      arm_target_device_name="M467KJHAN"
+      build_output_file_name="M46x_AP_1024_Loader.elf"
+      c_preprocessor_definitions="__M467KJHAN__;__M4xx_FAMILY;__M46x_SUBFAMILY;ARM_MATH_CM4;FLM_ALGORITHM_M46x_AP_1024"
+      c_user_include_directories="$(DeviceIncludePath);$(TargetsDir)/M4xx/CMSIS/StdDriver/M46x/inc"
+      linker_keep_symbols="libmem_crc32"
+      macros="DeviceIncludePath=$(TargetsDir)/M4xx/CMSIS/Device/M46x/Include;DeviceHeaderFile=$(TargetsDir)/M4xx/CMSIS/Device/M46x/Include/m46x.h;DeviceMemoryMapFile=$(TargetsDir)/M4xx/XML/M46x/M467KJHAN_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/M4xx/XML/M46x/M467_v1_Registers.xml;DeviceSystemFile=$(TargetsDir)/M4xx/CMSIS/Device/M46x/Source/system_M46x.c;DeviceFamily=M4xx;DeviceSubFamily=M46x;DeviceFLMSourceFile=M46x_AP_1024_flm.c" />
+    <configuration
+      Name="Release"
+      c_preprocessor_definitions="NDEBUG"
+      gcc_debugging_level="Level 1"
+      gcc_optimization_level="Optimize For Size"
+      hidden="Yes" />
+    <folder Name="CMSIS Files">
+      <file file_name="$(DeviceFLMSourceFile)" />
+      <file file_name="$(DeviceHeaderFile)" />
+      <file file_name="$(DeviceSystemFile)" />
+    </folder>
+    <folder
+      Name="Source Files"
+      exclude="M46x_AP_1024_flm.c"
+      filter="*.c;*.s"
+      path="."
+      recurse="Yes" />
+    <folder Name="System Files">
+      <file file_name="$(PackagesDir)/libraries/libmem_drivers/libmem_flm_driver.c" />
+      <file file_name="$(TargetsDir)/M4xx/Source/M4xx_Startup.s" />
+      <file file_name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+      <file file_name="$(StudioDir)/source/thumb_crt0.s" />
+    </folder>
+  </project>
+</solution>

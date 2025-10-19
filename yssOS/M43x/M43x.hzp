@@ -64,16 +64,12 @@
     <configuration
       Name="Flash"
       arm_target_flash_loader_file_path="$(DeviceLoaderFile)" />
-    <folder Name="APP Source Files">
-      <folder Name="inc">
-        <file file_name="$(ProjectDir)/app/inc/bsp.h" />
-        <file file_name="$(ProjectDir)/app/inc/config.h" />
-      </folder>
-      <folder Name="src">
-        <file file_name="$(ProjectDir)/app/src/bsp.cpp" />
-        <file file_name="$(ProjectDir)/app/src/main.cpp" />
-      </folder>
-    </folder>
+    <folder
+      Name="APP Source Files"
+      exclude=""
+      filter=""
+      path="app"
+      recurse="Yes" />
     <folder Name="Script Files">
       <file file_name="$(TargetsDir)/M4xx/Scripts/M4xx_Target.js">
         <configuration Name="Common" file_type="Reset Script" />

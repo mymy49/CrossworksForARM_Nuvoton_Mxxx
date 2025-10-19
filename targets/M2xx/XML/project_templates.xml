@@ -171,7 +171,7 @@
 		<property name="linker_scanf_fmt_level" />
 		<property name="linker_scanf_fp_enabled" />
 		<property name="linker_scanf_character_group_matching_enabled" />
-		<property name="c_user_include_directories" value="$(TargetsDir)/M2xx/CMSIS/StdDriver/M25x/inc;$(TargetsDir)/M2xx/CMSIS/Device/M25x/Include;$(ProjectDir)/app/inc;$(TargetsDir)/M2xx/yss OS/yss/inc" />
+		<property name="c_user_include_directories" value="$(TargetsDir)/M2xx/CMSIS/StdDriver/M25x/inc;$(TargetsDir)/M2xx/CMSIS/Device/M25x/Include;$(ProjectDir)/app/inc;$(TargetsDir)/M4xx/yss OS/yss/inc" />
 		<property name="property_groups_file_path" value="$(TargetsDir)/M2xx/XML/property_groups.xml" />
 		<property name="gcc_cplusplus_language_standard" value="gnu++11" />
 		<propertygroup name="Target" value="M251KG6AE" choose="Yes" />
@@ -200,7 +200,7 @@
 				<file name="$(ProjectDir)/app/inc/config.h" source="$(TargetsDir)/M2xx/yss OS/app/inc/M25x/config.h" />
 			</folder>
 		</folder>
-		<folder name="yss OS Source Files" path="$(TargetsDir)/M2xx/yss OS/yss" filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE" recurse="yes">
+		<folder name="yss OS Source Files" path="$(TargetsDir)/M4xx/yss OS/yss" filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE" recurse="yes">
 		</folder>
 		<folder name="System Files">
 			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">

@@ -1,5 +1,12 @@
 <!DOCTYPE Board_Memory_Definition_File>
-<root name="M433LE8AE">
-  <MemorySegment name="FLASH" start="0x00000000" size="0x00100000" access="ReadOnly" />
-  <MemorySegment name="RAM" start="0x20000000" size="0x00080000" access="Read/Write" />
+<root name="M467KJHAN">
+	<MemorySegment name="FLASH" start="0x00000000" size="0x00100000" access="ReadOnly" />
+	<MemorySegment name="SPIM_EX" start="0x00100000" size="0x02000000" access="ReadOnly" />
+	<MemorySegment name="HRAM_EX" start="0x0A000000" size="0x02000000" access="ReadOnly" />
+	<MemorySegment name="LDROM" start="0x0F100000" size="0x00002000" access="ReadOnly" />
+	<MemorySegment name="RAM" start="0x20000000" size="0x00080000" access="Read/Write" />
+	<MemorySegment name="EXTMEM" start="0x60000000" size="0x00300000" access="Read/Write" />
+	<MemorySegment name="EXTHRAM" start="0x80000000" size="0x02000000" access="Read/Write" />
+	<MemorySegment name="AHB" start="0x40000000" size="0x40000" />
+	<MemorySegment name="APB" start="0x40040000" size="0xC0000" />
 </root>

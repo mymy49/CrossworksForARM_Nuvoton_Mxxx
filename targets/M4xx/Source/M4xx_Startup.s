@@ -71,6 +71,16 @@ Reset_Handler:
   mov sp, r0
 #endif
 
+#if (defined(__ARM_ARCH_FPV4_SP_D16__) || defined(__ARM_ARCH_FPV5_D16__) || defined(__ARM_ARCH_FPV5_SP_D16__)) && !defined(NO_FPU_ENABLE)
+  /* Enable FPU */
+  ldr r0, =FPU_CPACR_REG
+  ldr r1, [r0]
+  orr r1, r1, #(0xF << 20)
+  str r1, [r0]
+  dsb
+  isb
+#endif
+
 #ifndef NO_SYSTEM_INIT
   /* Initialize system */
   ldr r0, =SystemInit
@@ -113,17 +123,8 @@ Reset_Handler:
   str r1, [r0]
 #endif
 
-#if (defined(__ARM_ARCH_FPV4_SP_D16__) || defined(__ARM_ARCH_FPV5_D16__) || defined(__ARM_ARCH_FPV5_SP_D16__)) && !defined(NO_FPU_ENABLE)
-  /* Enable FPU */
-  ldr r0, =FPU_CPACR_REG
-  ldr r1, [r0]
-  orr r1, r1, #(0xF << 20)
-  str r1, [r0]
-  dsb
-  isb
-#endif
-
   /* Jump to program start */
   b _start
+
 
 

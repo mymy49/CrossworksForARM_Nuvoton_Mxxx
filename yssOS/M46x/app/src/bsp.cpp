@@ -10,8 +10,6 @@
 
 FM24CL04B fram;
 
-GT911 touch;
-
 void initializeBoard(void)
 {
 	// GPIO 인터럽트 활성화
@@ -130,16 +128,6 @@ void initializeBoard(void)
 	// CTOUCH 초기화
 	gpioA.setAsOutput(10);
 	gpioA.setOutput(10, false);
-
-	GT911::config_t touchConfig = 
-	{
-		i2c1,			//I2c &peri;
-		{&gpioB, 6},	//pin_t isrPin;
-		{&gpioA, 10}	//pin_t resetPin;
-	};
-	gpioB.enableInterrupt();
-
-	touch.initialize(touchConfig);
 }
 
 #if YSS_L_HEAP_USE == true

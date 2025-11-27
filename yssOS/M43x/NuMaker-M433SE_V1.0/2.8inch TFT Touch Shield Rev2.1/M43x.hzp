@@ -46,7 +46,7 @@
       arm_target_interface_type="SWD"
       arm_target_loader_applicable_loaders="Flash"
       arm_target_loader_default_loader="Flash"
-      c_user_include_directories="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M43x/Include;$(ProjectDir)/app/inc;../../targets/M4xx/yss OS/yss/inc"
+      c_user_include_directories="$(TargetsDir)/M4xx/CMSIS/StdDriver/M43x/inc;$(TargetsDir)/M4xx/CMSIS/Device/M43x/Include;$(ProjectDir)/app/inc;../../../../targets/M4xx/yss OS/yss/inc"
       debug_register_definition_file="$(DeviceRegisterDefinitionFile)"
       gcc_cplusplus_language_standard="gnu++11"
       gcc_entry_point="Reset_Handler"
@@ -86,7 +86,7 @@
       Name="yss OS Source Files"
       exclude=""
       filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE"
-      path="../../targets/M4xx/yss OS/yss"
+      path="../../../../targets/M4xx/yss OS/yss"
       recurse="Yes">
       <configuration Name="Common" filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE" />
     </folder>

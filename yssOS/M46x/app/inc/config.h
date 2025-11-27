@@ -46,7 +46,21 @@
 
 // ####################### GUI 설정 #######################
 // GUI library Enable (true, false)
-#define USE_GUI				false
+#define USE_GUI							true
+
+// Touch Event Enable (true, false)
+#define USE_EVENT						false
+
+// Stack Size of Touch Event handler (Byte)
+#define TOUCH_EVENT_HANDLER_STACK_SIZE	4096
+
+// Depth of Touch Event Memory ( 32 ~ 256 )
+#define TOUCH_EVENT_MEMORY_DEPTH		128
+
+// Frame Buffer of GUI Object (Rgb565, Rgb888, Argb1555)
+#define YSS_GUI_FRAME_BUFFER			FrameBufferRgb565LE
+// Frame Buffer of LCD Output (Rgb565, Rgb888, Argb1555)
+#define YSS_SYSTEM_COUTPUT_FRAME_BUFFER	FrameBufferRgb565LE
 
 // ####################### KEY 설정 #######################
 // 최대 KEY 생성 가능 갯수 설정 (0 ~ ), 0일 경우 기능 꺼짐

@@ -30,7 +30,10 @@
 
 // ####################### GUI 설정 #######################
 // GUI library Enable (true, false)
-#define USE_GUI				false
+#define USE_GUI				true
+
+// Pointer Device library Enable (true, false)
+#define USE_POINTER_DEVICE	false
 
 // ####################### KEY 설정 #######################
 // 최대 KEY 생성 가능 갯수 설정 (0 ~ ), 0일 경우 기능 꺼짐
@@ -42,7 +45,7 @@
 // 주의 
 
 // BPWM 활성화
-#define BPWM0_ENABLE		false
+#define BPWM0_ENABLE		true
 #define BPWM1_ENABLE		false
 
 // EPWM 활성화
@@ -61,7 +64,7 @@
 
 // SPI 활성화
 #define SPI0_ENABLE			false
-#define SPI1_ENABLE			false
+#define SPI1_ENABLE			true
 
 // TIMER 활성화
 #define TIMER0_ENABLE		false

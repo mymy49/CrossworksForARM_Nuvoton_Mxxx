@@ -10,13 +10,10 @@
 
 #include <stdint.h>
 #include <mod/fram/FM24CL04B.h>
-#include <mod/ctouch/GT911.h>
 
 void initializeBoard(void);
 
 extern FM24CL04B fram;
-
-extern GT911 touch;
 
 #endif
 

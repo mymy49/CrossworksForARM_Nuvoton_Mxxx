@@ -30777,10 +30777,10 @@
 			<BitField start="23" size="1" name="TDC" description="Transmitter Delay Compensation" />
 		</Register>
 
-		<Register start="+0x010" size="4" name="CANFD_TEST" access="ReadOnly" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
-			<BitField start="0" size="4" name="DSJW" description="Data Re-Synchronization Jump Width" />
-			<BitField start="4" size="4" name="DTSEG2" description="Data time segment after sample point" />
-			<BitField start="8" size="4" name="DTSEG1" description="Data time segment before sample point" />
+		<Register start="+0x010" size="4" name="CANFD_TEST" access="Read/Write" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="LBCK" description="Loop Back Mode" />
+			<BitField start="5" size="2" name="TX" description="Control of Transmit Pin" />
+			<BitField start="7" size="1" name="RX" description="Receive Pin" />
 		</Register>
 
 		<Register start="+0x014" size="4" name="CANFD_RWD" access="Read/Write" description="RAM Watchdog Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
@@ -30805,7 +30805,7 @@
 			<BitField start="15" size="1" name="NISO" description="Non ISO Operation" />
 		</Register>
 
-		<Register start="+0x01C" size="4" name="CANFD_NBTP" access="ReadOnly" description="Nominal Bit Timing & Prescaler Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+		<Register start="+0x01C" size="4" name="CANFD_NBTP" access="Read/Write" description="Nominal Bit Timing & Prescaler Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
 			<BitField start="0" size="6" name="NTSEG2" description="Nominal Time segment after sample point" />
 			<BitField start="8" size="8" name="NTSEG1" description="Nominal Time segment before sample point" />
 			<BitField start="16" size="9" name="NBRP" description="Nominal Bit Rate Prescaler" />
@@ -31115,10 +31115,10 @@
 			<BitField start="23" size="1" name="TDC" description="Transmitter Delay Compensation" />
 		</Register>
 
-		<Register start="+0x010" size="4" name="CANFD_TEST" access="ReadOnly" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
-			<BitField start="0" size="4" name="DSJW" description="Data Re-Synchronization Jump Width" />
-			<BitField start="4" size="4" name="DTSEG2" description="Data time segment after sample point" />
-			<BitField start="8" size="4" name="DTSEG1" description="Data time segment before sample point" />
+		<Register start="+0x010" size="4" name="CANFD_TEST" access="Read/Write" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="LBCK" description="Loop Back Mode" />
+			<BitField start="5" size="2" name="TX" description="Control of Transmit Pin" />
+			<BitField start="7" size="1" name="RX" description="Receive Pin" />
 		</Register>
 
 		<Register start="+0x014" size="4" name="CANFD_RWD" access="Read/Write" description="RAM Watchdog Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
@@ -31453,10 +31453,10 @@
 			<BitField start="23" size="1" name="TDC" description="Transmitter Delay Compensation" />
 		</Register>
 
-		<Register start="+0x010" size="4" name="CANFD_TEST" access="ReadOnly" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
-			<BitField start="0" size="4" name="DSJW" description="Data Re-Synchronization Jump Width" />
-			<BitField start="4" size="4" name="DTSEG2" description="Data time segment after sample point" />
-			<BitField start="8" size="4" name="DTSEG1" description="Data time segment before sample point" />
+		<Register start="+0x010" size="4" name="CANFD_TEST" access="Read/Write" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="LBCK" description="Loop Back Mode" />
+			<BitField start="5" size="2" name="TX" description="Control of Transmit Pin" />
+			<BitField start="7" size="1" name="RX" description="Receive Pin" />
 		</Register>
 
 		<Register start="+0x014" size="4" name="CANFD_RWD" access="Read/Write" description="RAM Watchdog Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
@@ -31791,10 +31791,10 @@
 			<BitField start="23" size="1" name="TDC" description="Transmitter Delay Compensation" />
 		</Register>
 
-		<Register start="+0x010" size="4" name="CANFD_TEST" access="ReadOnly" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
-			<BitField start="0" size="4" name="DSJW" description="Data Re-Synchronization Jump Width" />
-			<BitField start="4" size="4" name="DTSEG2" description="Data time segment after sample point" />
-			<BitField start="8" size="4" name="DTSEG1" description="Data time segment before sample point" />
+		<Register start="+0x010" size="4" name="CANFD_TEST" access="Read/Write" description="TEST Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+			<BitField start="4" size="1" name="LBCK" description="Loop Back Mode" />
+			<BitField start="5" size="2" name="TX" description="Control of Transmit Pin" />
+			<BitField start="7" size="1" name="RX" description="Receive Pin" />
 		</Register>
 
 		<Register start="+0x014" size="4" name="CANFD_RWD" access="Read/Write" description="RAM Watchdog Register" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
